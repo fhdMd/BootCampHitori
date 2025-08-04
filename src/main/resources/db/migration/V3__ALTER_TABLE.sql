@@ -1,0 +1,2 @@
+ALTER TABLE user_flyway
+ADD COLUMN mobile VARCHAR(25)

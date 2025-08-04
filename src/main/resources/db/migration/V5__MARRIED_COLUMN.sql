@@ -1,0 +1,1 @@
+ALTER TABLE user_flyway ADD COLUMN isMarried boolean;

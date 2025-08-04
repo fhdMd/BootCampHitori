@@ -1,0 +1,1 @@
+ALTER TABLE user_flyway ALTER COLUMN mobile TYPE VARCHAR(11)
