@@ -25,6 +25,10 @@ public class User {
         this.name=userRequestDTO.getName();
         this.email= userRequestDTO.getEmail();
     }
+
+    public User() {
+    }
+
     public long getId() {
         return id;
     }
