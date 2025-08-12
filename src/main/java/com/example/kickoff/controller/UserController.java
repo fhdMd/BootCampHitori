@@ -2,9 +2,8 @@ package com.example.kickoff.controller;
 
 import com.example.kickoff.dto.UserRequestDTO;
 import com.example.kickoff.dto.UserResponseDTO;
-import com.example.kickoff.model.User;
-import com.example.kickoff.repo.UserRepo;
 import com.example.kickoff.service.UserService;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,9 +15,7 @@ public class UserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService){
-        this.userService=userService;
-    }
+    public UserController(UserService userService,NewTopic newTopic){this.userService=userService;}
 
     @PostMapping
     public UserResponseDTO insertNewUser(@RequestBody UserRequestDTO userRequestDTO){
@@ -34,6 +31,5 @@ public class UserController {
     public Optional<UserResponseDTO> getUserById(@PathVariable int id){
         return userService.findById(id);
     }
-
 
 }
