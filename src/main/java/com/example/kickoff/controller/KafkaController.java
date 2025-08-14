@@ -31,5 +31,4 @@ public class KafkaController {
         System.out.println("Got message "+message);
     }
 
-
 }

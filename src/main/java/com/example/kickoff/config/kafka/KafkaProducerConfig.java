@@ -1,6 +1,8 @@
     package com.example.kickoff.config.kafka;
 
     import com.example.kickoff.model.Order;
+    import io.confluent.kafka.serializers.KafkaAvroSerializer;
+    import org.apache.avro.Schema;
     import org.apache.kafka.clients.producer.ProducerConfig;
     import org.apache.kafka.common.serialization.StringSerializer;
     import org.springframework.context.annotation.Bean;
@@ -17,11 +19,9 @@
     public class KafkaProducerConfig {
 
         private final KafkaConfig kafkaConfig;
-
         public KafkaProducerConfig(KafkaConfig kafkaConfig){
             this.kafkaConfig=kafkaConfig;
         }
-
         @Bean
         public ProducerFactory<String,Order> producerFactory(){
             Map<String,Object> config=new HashMap<>();
