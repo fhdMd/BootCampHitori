@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "OrderCreatedEvent",
+  "fields": [
+    {
+      "name": "orderId",
+      "type": "int"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "createdTime",
+      "type": "string"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-package com.example.kickoff.controller;
+package com.example.kickoff.controller.kafka;
 
 import com.example.kickoff.config.kafka.KafkaConfig;
 import com.example.kickoff.config.kafka.KafkaProducerConfig;
@@ -6,7 +6,6 @@ import com.example.kickoff.model.Order;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
